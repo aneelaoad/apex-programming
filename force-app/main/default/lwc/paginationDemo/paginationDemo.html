@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Clientside Pagination">
+        <div class="slds-var-m-around_medium">
+            <template if:true={visibleContacts}>
+                    <template for:each={visibleContacts} for:item ="contact">
+                        <h1 key={contact.Id}>{contact.Name}</h1>
+                    </template>
+            </template>
+            <div slot="footer" class="slds-var-m-horizontal_medium">
+                <c-pagination records={totalContacts} onupdate={updateContactHandler}></c-pagination>
+            </div>
+        </div>
+    </lightning-card>
+</template>

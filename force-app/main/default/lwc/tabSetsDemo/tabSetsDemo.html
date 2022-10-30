@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Tabset Tutorial">
+        <lightning-tabset>
+            <lightning-tab onclick={handleChange} value="home" label="Home">
+                This is the {tabContent} tab
+            </lightning-tab>
+            
+            <lightning-tab onclick={handleChange} value="about" label="About">
+                This is the {tabContent} tab
+
+            </lightning-tab>
+            
+            <lightning-tab onclick={handleChange} value="contact" label="Contact">
+                This is the {tabContent} tab
+
+            </lightning-tab>
+        </lightning-tabset>
+    </lightning-card>
+</template>

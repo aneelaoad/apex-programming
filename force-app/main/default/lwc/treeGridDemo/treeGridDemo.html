@@ -1,0 +1,14 @@
+<template>
+    
+    <lightning-card title="Tree Grid Demo">
+        <lightning-tree-grid
+        columns={gridCols}
+        data={gridData}
+        
+        key-field="Id"
+        onrowselection={getSelectedRows}
+        >
+
+        </lightning-tree-grid>
+    </lightning-card>
+</template>

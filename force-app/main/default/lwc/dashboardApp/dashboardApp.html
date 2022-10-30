@@ -1,0 +1,79 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <header>
+        <h1 >Dashboard</h1>
+          
+    </header>
+
+    <div class="container" style="width: 1200px; height:600px" >
+        <div class="box_container">
+            <div class="box">
+                <h1> Total Confirmed Cases: {total.total_confirmed} </h1>
+            </div>
+
+            <div class="box">
+                <h1> Total Death Cases: {total.total_deaths} </h1>
+            </div>
+
+            <div class="box">
+                <h1> Total Recovered Cases: {total.total_recovered} </h1>
+            </div>
+
+            <div class="box">
+                <h1> Total Confirmed Cases: {total.total_active} </h1>
+            </div>
+
+            
+            <div class="box">
+                <h1> Fatality Rate: {total.total_fatalityRate}% </h1>
+            </div>
+
+            
+            <div class="box">
+                <h1> Recovery Rate: {total.total_recoveryRate}%</h1>
+            </div>
+        </div>
+
+        <div class="search_container">
+            <div class="heading">
+                <h1>Covid Data By Country</h1>
+            <div class="btn">
+                <button data-name="LIST" class={isListSelected} onclick={changeView}>List</button>
+                <button data-name="CHART" class={isChartSelected} onclick={changeView}>Chart</button>
+            </div>
+            </div>
+            <div class="search_form">
+                <lightning-input label="Enter Your Country Name"
+                onkeyup={searchHandler}
+                ></lightning-input>
+            </div>
+            <div class="buttons">
+                <button onclick={getFalalityRate}>Higher than average fatality</button>
+                <button>Higher then average recovery</button>
+                <button>Lower than average recovery</button>
+                <button>Lower than average fatality</button>
+                <button>More recovered than active</button>
+            </div>
+        </div>
+
+
+        
+      <div class="views">
+          
+     <template if:true={showListView}>
+        <lightning-datatable data={tableData}
+        columns={columns}
+        key-field =''
+        class="table table-bordered"
+        >
+            
+        </lightning-datatable>
+    </template>
+    <template if:false={showListView}>
+        <div class="chartContainer" lwc:dom = 'manual'>
+            
+        </div>
+    </template>
+      </div>  
+    </div>
+</template>

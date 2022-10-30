@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name = "alert" type="string" />
+    <h1>  Your ms is: {!v.alert}  </h1>
+    <lightning:button label="Nice work!" onClick="{!c.handleClick}" />	
+    
+</aura:component>

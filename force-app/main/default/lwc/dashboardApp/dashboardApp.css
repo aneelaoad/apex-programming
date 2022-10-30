@@ -1,0 +1,38 @@
+.container{
+    padding: large;
+    background: #dddddd;
+}
+.box_container{
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    background: #2c3e50;
+    padding: 1rem 1.5rem;
+    color: white;
+    text-align: center;
+    margin: 3px;
+}
+ h1{
+    font-size: large;
+}
+
+.search_container{
+    background: #2980b9;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+.search_container .heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.search_container .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+.search_container .active{
+    background: orange !important;
+}

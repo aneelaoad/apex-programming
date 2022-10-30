@@ -1,0 +1,30 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-button label="Prev" icon-name="utility:chevronleft" 
+            onclick={PrevHandler}
+            icon-position="left"
+            
+            ></lightning-button>
+        </lightning-layout-item>
+
+
+        
+        <lightning-layout-item flexibility="grow">
+                
+            <p class="slds-text-align_center">
+                page 1 of 5
+            </p>
+        </lightning-layout-item>
+
+        
+        <lightning-layout-item>
+            <lightning-button label="Next" icon-name="utility:chevronright"
+             onclick={NextHandler}
+             icon-position="right"
+             ></lightning-button>
+
+        </lightning-layout-item>
+
+    </lightning-layout>
+</template>

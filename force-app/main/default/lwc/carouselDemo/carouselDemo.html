@@ -1,0 +1,19 @@
+<template>
+    
+        <lightning-carousel>
+                <template if:true={data}>
+
+                        <template for:each={data} for:item="player">
+                                <lightning-carousel-image key={player.id} src ={player.src}
+                                header={player.header}
+                                >
+                        
+                                </lightning-carousel-image>
+                        
+                               </template>
+                              
+                </template>
+
+        </lightning-carousel>
+        
+</template>

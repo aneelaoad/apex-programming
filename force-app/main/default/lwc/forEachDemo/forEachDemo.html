@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="For Each Demo">
+            <template if:true={employees.data}>
+                <template for:each={employees.data} for:item="employee">
+                    <h3 key={employee.Id} >
+                    {employee.Name}
+
+                    </h3>
+                    </template>
+            </template>
+
+
+            <template if:true={employees.error}>
+                <h1> You're having some issue while fetching data from server</h1>
+            </template>
+    </lightning-card>
+</template>

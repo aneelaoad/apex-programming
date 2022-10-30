@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="CSV File Generator"
+    >
+    <div   class="slds-var-p-horizontal_large slds-var-p-vertical_medium  ">
+
+        <template for:each={userData} for:item="user">
+            <div key={user.username} class="slds-var-m-vertical_medium">
+                <p>{user.username} {user.age}, {user.title}</p>
+            </div>
+        </template>
+
+        <lightning-button variant="brand" label="Download Userdata" onclick={downloadUserData}
+        class="slds-var-m-horizontal_medium"   
+        ></lightning-button>
+        <lightning-button variant="brand" label="Download Accountdata" onclick={downloadAccountData}
+        class="slds-var-m-horizontal_medium"
+        ></lightning-button>
+    </div>
+
+    </lightning-card>
+</template>

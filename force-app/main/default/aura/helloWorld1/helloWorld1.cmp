@@ -1,0 +1,4 @@
+<aura:component >
+	<p> Hey this is Aneela</p>
+    <h1>My first Lightning App</h1>
+</aura:component>

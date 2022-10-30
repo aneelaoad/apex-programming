@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="IF-ELSE CONDITION">
+
+        <lightning-button label={label} onclick={toggleChange}> 
+
+        </lightning-button>
+       
+    </lightning-card>
+    <template if:true={cardToggle}>
+        
+    <lightning-card title="Toggle card">
+        <h2>Hello</h2>
+    </lightning-card>
+    </template>
+</template>

@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Parent Component" icon-name="standard:account">
+     <!-- <lightning-icon icon-name="" ></lightning-icon> -->
+
+        <!-- <h1 class="slds-text-align_center">
+            count: {counter}
+    
+        </h1> -->
+        <lightning-input label="Enter some value" onchange={takeInput} value={count} ></lightning-input>
+        <lightning-button label="10"
+        icon-name="utility:add"
+        type="number"
+        value="10"
+        onclick={sum}></lightning-button>
+
+
+
+        <!-- <h1>{counter}</h1> -->
+        <c-child-component message={count} ></c-child-component>
+            
+
+        <!-- <c-child-component  onsubcustomevent={handleSub} 
+        onmultipythree={handleMul}
+        onaddcustomevent={handleAdd}
+        ondivide={handleDivide}
+        ></c-child-component> -->
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Create records without Apex">
+        <div class="slds-var-m-around_large ">
+            <lightning-input label="Id" value={accountId}></lightning-input>
+            <lightning-input label="Name" onchange={handleNameChange}></lightning-input>
+            <lightning-button label="Create" class="slds-var-m-top_large" 
+            onclick={handleCreateAccount} variant="brand"></lightning-button>
+        </div>
+        <template if:true={count}>
+            Account Name: {name}
+            Account Id: {accountId}
+        </template>
+    </lightning-card>
+    
+</template>

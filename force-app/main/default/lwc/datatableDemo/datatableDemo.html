@@ -1,0 +1,15 @@
+<!-- sldsValidatorIgnore -->
+<template>
+<lightning-card title="Datatable demo">
+   <template if:true={tableData} class="slds-max-medium-table_stacked" >
+    <lightning-datatable
+    data={tableData}
+    columns={cols}
+    key-field='Id'
+    hide-checkbox-column
+    >
+ 
+    </lightning-datatable>
+   </template>
+</lightning-card>
+</template>

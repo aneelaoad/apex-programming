@@ -1,0 +1,9 @@
+<aura:component implements="lightning:isUrlAddressable" access="global"
+>
+<aura:attribute name="id" type="String" access="public" />
+
+<aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <div class="slds-card">
+        <h1>This is AURA COMPONENT</h1>
+    </div>
+</aura:component>

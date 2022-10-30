@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Car Color Picker" icon-name="standard:account" >
+        <img src={selectedImage} alt="" width="800px">
+
+       <!-- <lightning-layout>
+           <lightning-layout-item>
+               <lightning-button label="Black" onclick={blackColor}></lightning-button>
+               <lightning-button label="Red"></lightning-button>
+               <lightning-button label="White"></lightning-button>
+               <lightning-button label="Blue"></lightning-button>
+           </lightning-layout-item>
+       </lightning-layout> -->
+
+
+  <p slot="footer">
+    <template for:each={colors} for:item="color">
+        <span class={color} key={color} data-color={color} onclick={changeColor} ></span>
+    </template>
+    </p>
+
+    </lightning-card>
+</template>

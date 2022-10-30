@@ -1,0 +1,7 @@
+<aura:component >
+	<aura:attribute name="messages" type="List" default="['Aneela Oad',
+                             'Anmol Oad',
+                             'AKshay Kumar'
+                             ]" />
+
+</aura:component>

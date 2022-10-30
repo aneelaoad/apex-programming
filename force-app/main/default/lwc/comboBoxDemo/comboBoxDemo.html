@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Combo Box Demo" >
+      <div style="width: 1000px; height: 500px; padding:30px">
+        <lightning-combobox label="Fruits"
+        value={value}
+        options={options}
+        onchange={handleChange}
+        
+        >
+
+        </lightning-combobox>
+        <template if:true={value}>
+
+            
+        <lightning-datatable 
+        class="slds-max-medium-table_stacked"
+
+        title="Data From Accounts"
+        data={Data}
+        key-field = "id"
+        columns={columns}
+        >
+
+        </lightning-datatable>
+
+        </template>
+      </div>
+        <!-- <h1>You have selected {value}</h1> -->
+
+    </lightning-card>
+</template>
