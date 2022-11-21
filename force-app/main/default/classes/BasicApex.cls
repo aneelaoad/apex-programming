@@ -3,7 +3,7 @@ public class BasicApex {
     public static void justValues(){
       BasicInnerClass obj = new BasicInnerClass();
         
-        obj.property = 32;
+        // obj.property = 32;
         System.debug( obj.property);
     }
 
@@ -13,8 +13,10 @@ public class BasicApex {
     public class BasicInnerClass{
 
         public Integer property{
-            get{ return property;   }
-            set{ property = value;  }
+        // List<Account> listName = [SELECT Name FROM Account];
+
+            get{ return 5;   }
+            // set{ property = value;  }
     }
     }
 
