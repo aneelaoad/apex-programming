@@ -19,6 +19,7 @@ public class ApexDatabaseClassMethod {
         // as an array
         // Database.insert(accList, false) inserts the record into database. We are saving the inserted records in
         // insertedList array
+
         Database.SaveResult[] insertedList = Database.insert(accList, false);
 
         for (Database.SaveResult sr : insertedList) {
@@ -33,5 +34,19 @@ public class ApexDatabaseClassMethod {
                 }
             }
         }
+    }
+    public static void updateRecords(){
+
+        List<Account> accList = new List<Account>();
+        Account ac1 = [SELECT Name, Id, Phone FROM Account WHERE Id = '0015g000014CGELAA4'];
+        Account ac2 = [SELECT Name, Id, Phone FROM Account WHERE Id = '0015g000014CGEKAA4'];
+        ac1.Name ='Ram Charan';
+        ac2.Name= 'Mega Power Star';
+
+        accList.add(ac1);
+        accList.add(ac2);
+
+        Database.update(accList, false);
+
     }
 }
